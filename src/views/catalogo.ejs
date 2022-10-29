@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <title>Catálogo</title>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+    
+    <div class="content">
+        <div class="filters">
+            <div class="title">
+                <h1>Filtros</h1>
+            </div>
+            <form class="filter">
+                <div class="inputs">
+                    <div>
+                        <div class="select">
+                            <label for="mark">Marca:</label>
+                            <select name="mark" id="mark">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+
+                        <div class="select">
+                            <label for="cilindraje">Cilindraje:</label>
+                            <label for="min" class="min">Min: </label>
+                            <input type="number" name="min" id="min">
+                            <label for="max" class="max">Máx: </label>
+                            <input type="number" name="max" id="max">
+                        </div>
+
+                        <div class="select">
+                            <label for="category">Categoría:</label>
+                            <select name="category" id="category">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="select">
+                            <label for="year">Año:</label>
+                            <select name="year" id="year">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+
+                        <div class="select">
+                            <label for="color">Color:</label>
+                            <select name="color" id="color">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        <div class="cars" id="cars">
+
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
+
+    <script type="module" src="/js/catalogo.js"></script>
+</body>
+
+</html>
