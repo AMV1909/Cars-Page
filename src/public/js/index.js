@@ -55,7 +55,7 @@ if (cars.length > 0) {
     });
 
     document.getElementById("info").addEventListener("click", () => {
-        location.href = "catalogo.html";
+        location.href = "/catalogo";
     });
 
     document.getElementById("navigation-btn").style.display = "flex";

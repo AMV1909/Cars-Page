@@ -19,21 +19,23 @@ const getEmpleado = async (req, res) => {
 
 const createEmpleado = async (req, res) => {
     req.body.password = crypto.createHash('sha256').update(req.body.password).digest('base64');
-    const empleado = new empleadoSchema(req.body);
-
-    await empleado.save()
+    const newEmpleado = new empleadoSchema(req.body);
+    
+    await newEmpleado.save()
         .then(() => res.status(200).json("Empleado creado"))
         .catch(err => res.status(400).json("Error: " + err));
 };
 
 const updateEmpleado = async (req, res) => {
-    await empleadoSchema.findOneAndUpdate(req.params.document, req.body)
+    req.body.password = crypto.createHash('sha256').update(req.body.password).digest('base64');
+
+    await empleadoSchema.findOneAndUpdate(req.params._id, req.body)
         .then(() => res.status(200).json("Empleado actualizado"))
         .catch(err => res.status(400).json("Error: " + err));
 };
 
 const deleteEmpleado = async (req, res) => {
-    await empleadoSchema.findOneAndRemove(req.params.document)
+    await empleadoSchema.findOneAndRemove(req.params._id)
         .then(() => res.status(200).json("Empleado eliminado"))
         .catch(err => res.status(400).json("Error: " + err));
 };

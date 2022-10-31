@@ -4,13 +4,14 @@ import crypto from 'crypto';
 
 const createInfo = (req, res) => {
     const cars = [
-        { name: "Ford", image: "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210124-LOS-10-CARROS-MAS-VENDIDOS-DEL-MUNDO-EN-2020-01.jpg", mark: "A", model: "GT", cylinderCapacity: 5.0, year: 2018, color: "red", category: "sport", description: "The Ford Mustang is an American car manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car. The original 1962 Ford Mustang I two-seater concept car had evolved into the 1963 Mustang II four-seater concept car which Ford used to pretest how the public would take interest in the first production Mustang. The 1963 Mustang II concept car was designed with a variation of the production model's front and rear ends with a roof that was 2.7 inches shorter than the production model's fastback roofline.", sold: 50, available: 50 },
-        { name: "Mazda", image: "https://www.elcarrocolombiano.com/wp-content/uploads/2020/12/20201224-TOP-10-CARROS-MAS-VENDIDOS-DE-AMERICA-LATINA-HASTA-NOVIEMBRE-2020-01.jpg", mark: "B", model: "GT", cylinderCapacity: 5.0, year: 2020, color: "red", category: "no spe", description: "The Ford Mustang is an American car manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car. The original 1962 Ford Mustang I two-seater concept car had evolved into the 1963 Mustang II four-seater concept car which Ford used to pretest how the public would take interest in the first production Mustang. The 1963 Mustang II concept car was designed with a variation of the production model's front and rear ends with a roof that was 2.7 inches shorter than the production model's fastback roofline.", sold: 50, available: 50 },
-        { name: "Chevrolet", image: "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210124-LOS-10-CARROS-MAS-VENDIDOS-DEL-MUNDO-EN-2020-01.jpg", mark: "C", model: "GT", cylinderCapacity: 5.0, year: 2022, color: "blue", category: "sport", description: "The Ford Mustang is an American car manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car. The original 1962 Ford Mustang I two-seater concept car had evolved into the 1963 Mustang II four-seater concept car which Ford used to pretest how the public would take interest in the first production Mustang. The 1963 Mustang II concept car was designed with a variation of the production model's front and rear ends with a roof that was 2.7 inches shorter than the production model's fastback roofline.", sold: 50, available: 50 },
+        { name: "EcoSport", image: "https://www.elcarrocolombiano.com/wp-content/uploads/2018/10/20181008-FORD-ECOSPORT-FREESTYLE-4X4-2019-COLOMBIA-PRECIO-FICHA-TECNICA-01.jpg", mark: "Ford", model: "2019", cylinderCapacity: 3000, year: 2019, color: "Azul", category: "4x4", description: "El Ford EcoSport destaca por su buen comportamiento dinámico, donde merece la pena hablar de la suspensión, dirección y una gran calidad de aislamiento, lo que permite que este modelo sea un SUV más eficaz y grato a la hora de conducirlo.", sold: 50, available: 50 },
+        { name: "Mazda", image: "https://www.elcarrocolombiano.com/wp-content/uploads/2020/04/20201704-MAZDA-6-RENDER-PORTADA.jpg", mark: "Mazda", model: "6", cylinderCapacity: 2500, year: 2017, color: "Rojo", category: "Deportivo", description: "El Mazda6 2017 puede ser maniobrado en 6 velocidades automáticas que están potenciadas por un motor de tipo V4 que puede alcanzar hasta 184 caballos de fuerza. Su economía de combustible le permite recorrer entre 26 y 35 millas por galón de gasolina en su tanque que puede almacenar hasta 16.4 galones, y su cabina tiene espacio hasta para 5 pasajeros.", sold: 50, available: 50 },
+        { name: "Camaro", image: "https://www.chevrolet.com.co/content/dam/chevrolet/south-america/colombia/espanol/index/cars/2018-camaro/04-images/negro-camaro-six-ss-2018.jpg?imwidth=960", mark: "Chevrolet", model: "Six SS", cylinderCapacity: 2750, year: 2018, color: "Negro", category: "Deportivo", description: "La sexta generación del Chevrolet Camaro Six SS llega con un diseño totalmente nuevo, una arquitectura más atlética y liviana que respeta el ADN de su antecesor manteniendo solo dos de sus piezas: el emblema del corbatín y la insignia SS. Sus líneas afinadas de forma meticulosa en el túnel del viento están pensadas para perfeccionar su diseño aerodinámico y contribuir a su alto desempeño..", sold: 50, available: 50 },
     ];
 
     const employees = [
-        { name: "Admin", lastname: "Admin", email: "admin@gmail.com", password: "admin" }
+        { name: "Admin", lastname: "Admin", email: "admin@gmail.com", password: "admin" },
+        { name: "Santiago", lastname: "Herrera", email: "herrera@gmail.com", password: "concesionario2022" },
     ];
 
     cars.forEach((car) => {
@@ -27,4 +28,11 @@ const createInfo = (req, res) => {
     res.send("Información creada");
 }
 
-export { createInfo };
+const deteleAll = async (req, res) => {
+    await vehiculoSchema.deleteMany({});
+    await empleadoSchema.deleteMany({});
+
+    res.send("Información eliminada");
+}
+
+export { createInfo, deteleAll };

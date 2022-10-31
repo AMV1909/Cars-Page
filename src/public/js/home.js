@@ -59,7 +59,7 @@ if (cars.length > 0) {
     });
 
     document.getElementById("info").addEventListener("click", () => {
-        location.href = "catalogo.html";
+        location.href = "/inventario";
     });
 
     document.getElementById("navigation-btn").style.display = "flex";
