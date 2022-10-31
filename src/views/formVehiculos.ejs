@@ -6,34 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/form.vehiculos.css">
     <link rel="stylesheet" href="/css/loged.css">
     <link rel="stylesheet" href="/css/report.css">
-    <title>Home</title>
+    <title>Vehículos</title>
 </head>
 
 <body>
     <%- include("partials/navbar") %>
     
     <div class="content">
-        <div class="slider">
-            <div class="slides" id="slides">
-
-            </div>
-
-            <div class="navigation-manual" id="navigation-manual">
-
-            </div>
-
-            <div class="navigation-btn" id="navigation-btn">
-                <button class="left" id="left"><img src="https://cdn-icons-png.flaticon.com/512/109/109609.png"
-                        alt="left Arrow"></button>
-                <button class="right" id="right"><img src="https://cdn-icons-png.flaticon.com/512/109/109609.png"
-                        alt="Right Arrow"></button>
-            </div>
-            
-            <button class="info" id="info">Conocer Más</button>
+        <div>
+            <button id="add">Agregar Vehículo</button>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Cilindraje</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+        </table>
     </div>
 
     <div class="modal" id="modal">
@@ -51,7 +56,7 @@
 
     <%- include("partials/footer") %>
 
-    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/form.vehiculos.js"></script>
     <script type="module" src="/js/report.js"></script>
 </body>
 

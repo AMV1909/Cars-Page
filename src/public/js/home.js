@@ -1,5 +1,9 @@
 import { cars } from './cars.js';
 
+document.getElementById("forms").innerHTML = `
+    <a href="/form/vehiculos">Vehículos</a>
+`;
+
 if (cars.length > 0) {
     var counter = 1;
 
@@ -61,7 +65,6 @@ if (cars.length > 0) {
     document.getElementById("navigation-btn").style.display = "flex";
     document.getElementById("info").style.display = "flex";
 } else {
-
     document.getElementById("slides").innerHTML = `
         <div class="no-data">
             <h1>No hay vehículos disponibles</h1>

@@ -11,11 +11,6 @@ const empleadoSchema = new Schema({
         required: true,
         trim: true
     },
-    document: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     email: {
         type: String,
         required: true,
@@ -26,11 +21,7 @@ const empleadoSchema = new Schema({
         type: String,
         required: true,
         trim: true
-    },
-    admin: {
-        type: Boolean,
-        required: true
-    },
+    }
 },
 {
     versionKey: false,

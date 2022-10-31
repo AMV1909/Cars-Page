@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/inventario.css">
+    <link rel="stylesheet" href="/css/loged.css">
+    <link rel="stylesheet" href="/css/report.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+    
+    <div class="content">
+        <div class="filters">
+            <div class="title">
+                <h1>Filtros</h1>
+            </div>
+            <form class="filter">
+                <div class="inputs">
+                    <div>
+                        <div class="select">
+                            <label for="mark">Marca:</label>
+                            <select name="mark" id="mark">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+    
+                        <div class="select">
+                            <label for="cilindraje">Cilindraje:</label>
+                            <label for="min" class="min">Min: </label>
+                            <input type="number" name="min" id="min">
+                            <label for="max" class="max">Máx: </label>
+                            <input type="number" name="max" id="max">
+                        </div>
+    
+                        <div class="select">
+                            <label for="category">Categoría:</label>
+                            <select name="category" id="category">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="select">
+                            <label for="year">Año:</label>
+                            <select name="year" id="year">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+    
+                        <div class="select">
+                            <label for="color">Color:</label>
+                            <select name="color" id="color">
+                                <option value="">Seleccione una opción</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        <div class="cars" id="cars">
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="content">
+            <div class="report-title">
+                <h1>Reporte de ventas</h1>
+            </div>
+            <div class="report-content" id="report-content">
+                
+            </div>
+
+            <button id="closeModal">Volver</button>
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
+
+    <script type="module" src="/js/inventario.js"></script>
+    <script type="module" src="/js/report.js"></script>
+</body>
+
+</html>

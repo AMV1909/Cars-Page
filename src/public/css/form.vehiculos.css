@@ -1,0 +1,76 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+#add {
+    margin: 24px 0;
+    background-color: #5E7199;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#add:hover {
+    background-color: #4B5B7F;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 80%;
+    background-color: white;
+    text-align: center;
+}
+
+thead {
+    background-color: #5E7199;
+    color: white;
+}
+
+tr {
+    height: 24px;
+}
+
+th, td {
+    padding: 0 15px;
+    width: 48px;
+    height: 48px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.edit {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1159/1159633.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.delete {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1345/1345874.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    margin: 12px 0;
+    cursor: pointer;
+}

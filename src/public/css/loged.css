@@ -1,0 +1,26 @@
+.links {
+    width: 100%;
+}
+
+.navbar {
+    background-color: #5E7199;
+}
+
+.filter button {
+    background-color: #5E7199;
+}
+
+footer {
+    background-color: #5E7199;
+    color: black;
+}
+
+footer .listas ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+footer .redes img {
+    filter: invert(100%);
+}

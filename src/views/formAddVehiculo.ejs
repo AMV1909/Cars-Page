@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/formAddVehiculo.css">
+    <link rel="stylesheet" href="/css/loged.css">
+    <link rel="stylesheet" href="/css/report.css">
+    <title>Agregar Vehículo</title>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+    
+    <div class="content">
+        <div class="form">
+            <div class="title">
+                <h1>Agregar Vehículo</h1>
+            </div>
+            <form autocomplete="off" id="addCar">
+                <div class="field">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required autofocus>
+                </div>
+
+                <div class="field">
+                    <label for="mark">Marca</label>
+                    <input type="text" id="mark" name="makr" required>
+                </div>
+
+                <div class="field">
+                    <label for="category">Categoría</label>
+                    <input type="text" id="category" name="category" required>
+                </div>
+
+                <div class="field">
+                    <label for="image">URL Imagen</label>
+                    <input type="text" id="image" name="image" required>
+                </div>
+
+                <div class="field">
+                    <label for="model">Modelo</label>
+                    <input type="text" id="model" name="model" required>
+                </div>
+
+                <div class="field">
+                    <label for="cylinderCapacity">Cilindraje (N°)</label>
+                    <input type="number" id="cylinderCapacity" name="cylinderCapacity" required>
+                </div>
+
+                <div class="field">
+                    <label for="year">Año</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+
+                <div class="field">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color" required>
+                </div>
+
+                <div class="fullField">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="available">Disponibles (N°)</label>
+                    <input type="number" id="available" name="available" required>
+                </div>
+
+                <div class="field">
+                    <label for="sold">Vendidos (N°)</label>
+                    <input type="number" id="sold" name="sold" required>
+                </div>
+
+                <div class="btn">
+                    <button type="submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="content">
+            <div class="report-title">
+                <h1>Reporte de ventas</h1>
+            </div>
+            <div class="report-content" id="report-content">
+                
+            </div>
+
+            <button id="closeModal">Volver</button>
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
+
+    <script type="module" src="/js/formAddVehiculo.js"></script>
+    <script type="module" src="/js/report.js"></script>
+</body>
+
+</html>

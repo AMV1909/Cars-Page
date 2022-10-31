@@ -16,11 +16,13 @@ addEventListener("submit", async (e) => {
         }),
     }).then((res) => res.json())
         .then((data) => {
-            if (data.token) {
-                localStorage.setItem("token", data.token);
+            if (data.message) {
                 window.location.href = "/home";
             } else {
                 document.getElementById("error").innerHTML = data;
+                setTimeout(() => {
+                    document.getElementById("error").innerHTML = "";
+                }, 5000);
             }
         })
         .catch((err) => alert(err))

@@ -1,11 +1,6 @@
 import { Schema, model } from "mongoose";
 
 const vehiculoSchema = new Schema({
-    seriesNumber: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     name: {
         type: String,
         required: true,

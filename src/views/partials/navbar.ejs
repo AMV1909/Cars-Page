@@ -1,13 +1,16 @@
 <div class="navbar">
     <div class="logo">
-        <a href="index.html">
+        <a href="/">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/2048px-Volkswagen_Logo_till_1995.svg.png"
                 alt="Logo">
         </a>
     </div>
     <div class="links">
-        <% links.forEach((link) => { %>
-            <a href="<%= link.url %>"><%= link.name %></a>
-        <% }) %>
+        <div id="forms"></div>
+        <div class="views">
+            <% links.forEach((link) => { %>
+                <a href="<%= link.url %>" id="<%= link.name %>"><%= link.name %></a>
+            <% }) %>
+        </div>
     </div>
 </div>
